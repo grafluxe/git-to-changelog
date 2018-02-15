@@ -1,0 +1,29 @@
+{
+  "name": "git-to-changelog",
+  "description": "A simple no-frills CLI tool to create a changelog file based on git commits.",
+  "version": "1.0.0",
+  "bin": {
+    "git-to-changelog": "main.js"
+  },
+  "author": "Leandro Silva (http://grafluxe.com)",
+  "homepage": "https://github.com/Grafluxe/git-to-changelog",
+  "repository": "Grafluxe/git-to-changelog.git",
+  "license": "MIT",
+  "keywords": [
+    "changelog",
+    "log",
+    "git",
+    "changes",
+    "history",
+    "commit",
+    "commits",
+    "tags",
+    "auto",
+    "automatic",
+    "bitbucket",
+    "gitlab"
+  ],
+  "dependencies": {
+    "compare-versions": "^3.1.0"
+  }
+}
