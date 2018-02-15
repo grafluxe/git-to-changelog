@@ -115,7 +115,7 @@ function handleFirstCommitVersion(formattedCommits) {
 
       let pkgVers = pkg.version,
           tag,
-          latestTag;
+          latestTag = "0.0.0";
 
       tag = commit.match(/tag: v?(\d{1,}\.\d{1,}\.\d{1,}[^,)]*)/);
 
