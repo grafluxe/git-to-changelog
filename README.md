@@ -75,7 +75,9 @@ Becomes:
 - Update token hash to include encoded user name
 ```
 
-See a [sample output](#sample-output).
+## Sample Output
+
+See this projects [CHANGELOG](https://github.com/Grafluxe/git-to-changelog/blob/master/CHANGELOG.md).
 
 ## License
 
@@ -84,28 +86,3 @@ Copyright (c) 2018 Leandro Silva (http://grafluxe.com)
 Released under the MIT License.
 
 See LICENSE.md for entire terms.
-
-
-## Sample Output
-
-The below content is an example of what this tool outputs:
-
-# Changelog
-
-## 1.1.0 (2018-02-14)
-
-- [Improve 'failed to connect to server' logic](#will-link-to-git-host.com/commit/30d1878)
-- [Implement 'feat/additional-validation'](#will-link-to-git-host.com/commit/dddb03a)
-  - [Update inline docs](#will-link-to-git-host.com/commit/1027df0)
-  - [Update error e041 message](#will-link-to-git-host.com/commit/f6f8cd1)
-  - [Add error e040](#will-link-to-git-host.com/commit/67e294b)
-- [Add support for admin-only routes](#will-link-to-git-host.com/commit/8c6a1cc)
-- [Update token hash to include encoded user name](#will-link-to-git-host.com/commit/4bd8518)
-- [Whitelist routes to allow skipping authentication](#will-link-to-git-host.com/commit/674a378)
-
-## 1.0.0 (2018-01-23)
-
-- [Update docs](#will-link-to-git-host.com/commit/08d01af)
-- [Finalize 'impressions' route](#will-link-to-git-host.com/commit/0919e58)
-- [Fix issue with 'setToken' promise](#will-link-to-git-host.com/commit/a821a1b)
-- [Improve README structure](#will-link-to-git-host.com/commit/3e11cfa)
