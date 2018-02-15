@@ -1,7 +1,12 @@
 # Changelog
 
+## 1.1.0 (2018-02-15)
+
+- [Improve error handling](https://github.com/Grafluxe/git-to-changelog/commit/ffed704)
+
 ## 1.0.1 (2018-02-15)
 
+- [Bump version](https://github.com/Grafluxe/git-to-changelog/commit/fa46511)
 - [Replace sample output with link to full CHANGELOG](https://github.com/Grafluxe/git-to-changelog/commit/3a179b0)
 - [Implement 'fix/wrong-package-loaded'](https://github.com/Grafluxe/git-to-changelog/commit/55b9d6e)
   - [Fix issue where logic points to the wrong package](https://github.com/Grafluxe/git-to-changelog/commit/bf057a1)
