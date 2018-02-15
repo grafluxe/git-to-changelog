@@ -11,7 +11,7 @@
 let fs = require("fs"),
     exec = require("child_process").exec,
     comparePkgVersion = require("compare-versions"),
-    pkg = require("./package.json"),
+    pkg = require("../../package.json"),
     commitURI,
     out;
 
