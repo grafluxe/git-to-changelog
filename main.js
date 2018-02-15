@@ -29,7 +29,15 @@ getCommits()
   .then(prepareOutput)
   .then(save)
   .catch(err => {
-    console.error("There was an error creating your changelog.\n\n" + err);
+    let errMsg = "";
+
+    errMsg += "+--------------------------------------------+\n";
+    errMsg += "| There was an error creating your changelog |\n";
+    errMsg += "+--------------------------------------------+\n\n";
+    errMsg += err + "\n";
+
+    console.error(errMsg);
+    process.exit(1);
   });
 
 function getCommits() {
@@ -124,7 +132,7 @@ function handleFirstCommitVersion(formattedCommits) {
       }
 
       if (comparePkgVersion(pkgVers, latestTag) === -1) {
-        rej(`Your package version (${pkgVers}) has a SemVer value that falls before your latest tag (${latestTag}).\n`);
+        rej(`Your package version (${pkgVers}) has a SemVer value that falls before your latest tag (${latestTag}).`);
       }
 
       if (!formattedCommits[0].tag) {
