@@ -75,31 +75,7 @@ Becomes:
 - Update token hash to include encoded user name
 ```
 
-## Sample Output
-
-<div style="border: 2px solid #999; padding: 30px">
-  <h1>Changelog</h1>
-  <h2>1.1.0 (2018-02-14)</h2>
-  <ul>
-  <li><a href="https://git.hosturl.com/commit/30d1878">Improve 'failed to connect to server' logic</a></li>
-  <li><a href="https://git.hosturl.com/commit/dddb03a">Implement 'feat/additional-validation'</a></li>
-    <ul>
-      <li><a href="https://git.hosturl.com/commit/1027df0">Update inline docs</a></li>
-      <li><a href="https://git.hosturl.com/commit/f6f8cd1">Update error e041 message</a></li>
-      <li><a href="https://git.hosturl.com/commit/67e294b">Add error e040</a></li>
-    </ul>
-  <li><a href="https://git.hosturl.com/commit/8c6a1cc">Add support for admin-only routes</a></li>
-  <li><a href="https://git.hosturl.com/commit/4bd8518">Update token hash to include encoded user name</a></li>
-  <li><a href="https://git.hosturl.com/commit/674a378">Whitelist routes to allow skipping authentication</a></li>
-  </ul>
-  <h2>1.0.0 (2018-01-23)</h2>
-  <ul>
-  <li><a href="https://git.hosturl.com/commit/08d01af">Update docs</a></li>
-  <li><a href="https://git.hosturl.com/commit/0919e58">Finalize 'impressions' route</a></li>
-  <li><a href="https://git.hosturl.com/commit/a821a1b">Fix issue with 'setToken' promise</a></li>
-  <li><a href="https://git.hosturl.com/commit/3e11cfa">Improve README structure</a></li>
-  </ul>
-</div>
+See a [sample output](#sample-output).
 
 ## License
 
@@ -108,3 +84,28 @@ Copyright (c) 2018 Leandro Silva (http://grafluxe.com)
 Released under the MIT License.
 
 See LICENSE.md for entire terms.
+
+
+## Sample Output
+
+The below content is an example of what this tool outputs:
+
+# Changelog
+
+## 1.1.0 (2018-02-14)
+
+- [Improve 'failed to connect to server' logic](#will-link-to-git-host.com/commit/30d1878)
+- [Implement 'feat/additional-validation'](#will-link-to-git-host.com/commit/dddb03a)
+  - [Update inline docs](#will-link-to-git-host.com/commit/1027df0)
+  - [Update error e041 message](#will-link-to-git-host.com/commit/f6f8cd1)
+  - [Add error e040](#will-link-to-git-host.com/commit/67e294b)
+- [Add support for admin-only routes](#will-link-to-git-host.com/commit/8c6a1cc)
+- [Update token hash to include encoded user name](#will-link-to-git-host.com/commit/4bd8518)
+- [Whitelist routes to allow skipping authentication](#will-link-to-git-host.com/commit/674a378)
+
+## 1.0.0 (2018-01-23)
+
+- [Update docs](#will-link-to-git-host.com/commit/08d01af)
+- [Finalize 'impressions' route](#will-link-to-git-host.com/commit/0919e58)
+- [Fix issue with 'setToken' promise](#will-link-to-git-host.com/commit/a821a1b)
+- [Improve README structure](#will-link-to-git-host.com/commit/3e11cfa)
