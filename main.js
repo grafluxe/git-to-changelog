@@ -84,9 +84,16 @@ function formatCommits(commits) {
       mergeCommitEnd = true;
     }
 
+    subject = encodeHTML(subject);
+
     return {date, tag, hash, subject, mergeCommitStart, mergeCommitEnd};
   }));
 }
+
+function encodeHTML(subject) {
+  return subject.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
 
 function flagIndention(formattedCommits) {
   return Promise.resolve(formattedCommits.map((commit, i) => {
