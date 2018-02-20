@@ -33,10 +33,11 @@ getCommits()
 
     errMsg += "+--------------------------------------------+\n";
     errMsg += "| There was an error creating your changelog |\n";
-    errMsg += "+--------------------------------------------+\n\n";
-    errMsg += err + "\n";
+    errMsg += "+--------------------------------------------+\n";
 
-    console.error(errMsg);
+    console.error("\x1b[31m%s\x1b[0m", errMsg);
+    console.error(err + "\n");
+
     process.exit(1);
   });
 
