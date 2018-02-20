@@ -1,7 +1,7 @@
 {
   "name": "git-to-changelog",
   "description": "A simple no-frills CLI tool to create a changelog file based on git commits.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "bin": {
     "git-to-changelog": "main.js"
   },
@@ -21,7 +21,8 @@
     "auto",
     "automatic",
     "bitbucket",
-    "gitlab"
+    "gitlab",
+    "cli"
   ],
   "dependencies": {
     "compare-versions": "^3.1.0"

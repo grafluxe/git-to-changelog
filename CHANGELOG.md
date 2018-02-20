@@ -1,7 +1,14 @@
 # Changelog
 
+## 1.2.0 (2018-02-20)
+
+- [Color error message](https://github.com/Grafluxe/git-to-changelog/commit/f0611a2)
+- [Encode HTML entities in commit subjects](https://github.com/Grafluxe/git-to-changelog/commit/f948e27)
+- [Stop function execution on error](https://github.com/Grafluxe/git-to-changelog/commit/8c40d61)
+
 ## 1.1.0 (2018-02-15)
 
+- [Bump version](https://github.com/Grafluxe/git-to-changelog/commit/4a06b7b)
 - [Improve error handling](https://github.com/Grafluxe/git-to-changelog/commit/ffed704)
 
 ## 1.0.1 (2018-02-15)
