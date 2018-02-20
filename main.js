@@ -44,7 +44,7 @@ function getCommits() {
   return new Promise((res, rej) => {
     exec("git log --topo-order --date=short --format=\"%cd~>%d~>%h~>%s~>%p\"", (err, commits) => {
       if (err) {
-        rej(err);
+        return rej(err);
       }
 
       res(commits);
@@ -118,7 +118,7 @@ function handleFirstCommitVersion(formattedCommits) {
   return new Promise((res, rej) => {
     exec("git log --tags -1 --format=\"%d\"", (err, commit) => {
       if (err) {
-        rej(err);
+        return rej(err);
       }
 
       let pkgVers = pkg.version,
@@ -132,7 +132,7 @@ function handleFirstCommitVersion(formattedCommits) {
       }
 
       if (comparePkgVersion(pkgVers, latestTag) === -1) {
-        rej(`Your package version (${pkgVers}) has a SemVer value that falls before your latest tag (${latestTag}).`);
+        return rej(`Your package version (${pkgVers}) has a SemVer value that falls before your latest tag (${latestTag}).`);
       }
 
       if (!formattedCommits[0].tag) {
@@ -178,7 +178,7 @@ function save() {
   return new Promise((res, rej) => {
     fs.writeFile("./CHANGELOG.md", out, err => {
       if (err) {
-        rej(err);
+        return rej(err);
       }
 
       res();
