@@ -1,7 +1,14 @@
 # Changelog
 
+## 1.2.2 (2018-03-20)
+
+- [Implement 'fix/char-escaping'](https://github.com/Grafluxe/git-to-changelog/commit/c6e60ed)
+  - [Add inline notes to 'encodeHTML' method](https://github.com/Grafluxe/git-to-changelog/commit/a363b47)
+  - [Encode/escape chars that conflict with URI syntax](https://github.com/Grafluxe/git-to-changelog/commit/559fd5c)
+
 ## 1.2.1 (2018-02-20)
 
+- [Bump version](https://github.com/Grafluxe/git-to-changelog/commit/95d56cc)
 - [Only encode required HTML entities](https://github.com/Grafluxe/git-to-changelog/commit/f46ecd7)
 
 ## 1.2.0 (2018-02-20)
