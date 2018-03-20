@@ -92,7 +92,13 @@ function formatCommits(commits) {
 }
 
 function encodeHTML(subject) {
-  return subject.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  return subject
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/\\$/, "\\\\")
+    .replace(/]/g, "\\]")
+    .replace(/(?!.*])\[/g, "&#91;")
+    .replace(/`/g, "\\`");
 }
 
 
