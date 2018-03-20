@@ -92,7 +92,13 @@ function formatCommits(commits) {
 }
 
 function encodeHTML(subject) {
-  return subject.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  return subject
+    .replace(/&/g, "&amp;")         // Encode ampersands
+    .replace(/</g, "&lt;")          // Encode less-than symbols
+    .replace(/\\$/, "\\\\")         // Escape back-slash if it's the last char
+    .replace(/]/g, "\\]")           // Escape right-brackets
+    .replace(/(?!.*])\[/g, "&#91;") // Encode left-brackets (if no right-brackets are present)
+    .replace(/`/g, "\\`");          // Escape back-ticks
 }
 
 
