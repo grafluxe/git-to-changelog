@@ -58,7 +58,7 @@ function splitCommits(commits) {
 }
 
 function formatCommits(commits) {
-  let lastParent;
+  let prevParent;
 
   return Promise.resolve(commits.map(commit => {
     let [date, refNames, hash, subject, parents] = commit.split("~>"),
@@ -79,9 +79,9 @@ function formatCommits(commits) {
 
     if (parents && parents.includes(" ")) {
       mergeCommitStart = true;
-      lastParent = parents.slice(0, parents.indexOf(" "));
+      prevParent = parents.slice(0, parents.indexOf(" "));
       subject = subject.replace(/^Merge branch ('.+?').*/, "Implement $1");
-    } else if (parents === lastParent) {
+    } else if (parents === prevParent) {
       mergeCommitEnd = true;
     }
 
