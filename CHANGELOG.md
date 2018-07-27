@@ -1,7 +1,13 @@
 # Changelog
 
+## 1.3.0 (2018-07-27)
+
+- [Improve commit indentation](https://github.com/Grafluxe/git-to-changelog/commit/0409ce1)
+- [Update 'previous parents' variable name](https://github.com/Grafluxe/git-to-changelog/commit/51fde7f)
+
 ## 1.2.2 (2018-03-20)
 
+- [Bump version](https://github.com/Grafluxe/git-to-changelog/commit/4bda335)
 - [Implement 'fix/char-escaping'](https://github.com/Grafluxe/git-to-changelog/commit/c6e60ed)
   - [Add inline notes to 'encodeHTML' method](https://github.com/Grafluxe/git-to-changelog/commit/a363b47)
   - [Encode/escape chars that conflict with URI syntax](https://github.com/Grafluxe/git-to-changelog/commit/559fd5c)

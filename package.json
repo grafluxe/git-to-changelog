@@ -1,7 +1,7 @@
 {
   "name": "git-to-changelog",
   "description": "A simple no-frills CLI tool to create a changelog file based on git commits.",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "bin": {
     "git-to-changelog": "main.js"
   },
