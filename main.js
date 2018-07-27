@@ -81,7 +81,7 @@ function formatCommits(commits) {
       mergeCommitStart = true;
       prevParent = parents.slice(0, parents.indexOf(" "));
       subject = subject.replace(/^Merge branch ('.+?').*/, "Implement $1");
-    } else if (parents === prevParent) {
+    } else if (hash == prevParent) {
       mergeCommitEnd = true;
     }
 
@@ -101,13 +101,12 @@ function encodeHTML(subject) {
     .replace(/`/g, "\\`");          // Escape back-ticks
 }
 
-
 function flagIndention(formattedCommits) {
   return Promise.resolve(formattedCommits.map((commit, i) => {
     if (i > 0) {
       let prevCommit = formattedCommits[i - 1];
 
-      if (commit.tag || commit.mergeCommitStart || prevCommit.mergeCommitEnd) {
+      if (commit.tag || commit.mergeCommitStart || commit.mergeCommitEnd) {
         commit.indent = false;
       } else if (prevCommit.mergeCommitStart || prevCommit.indent) {
         commit.indent = true;
