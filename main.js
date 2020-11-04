@@ -2,7 +2,7 @@
 
 /**
  * @author Leandro Silva
- * @copyright 2018 Leandro Silva (http://grafluxe.com)
+ * @copyright 2018, 2020 Leandro Silva (http://grafluxe.com)
  * @license MIT
  *
  * @classdesc A simple no-frills CLI tool to create a changelog file based on git commits.
