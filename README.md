@@ -2,7 +2,7 @@
 
 A simple no-frills CLI tool to create a changelog markdown file based on git commits.
 
-Created for projects that I release in my job at Tremor Video DSP, this tool simply creates a CHANGELOG.md from git commits. I tried other npm packages and found that they did not fit my needs for a plug and play, no customization needed, solution.
+This tool simply creates a CHANGELOG.md from git commits. I tried other npm packages and found that they did not fit my needs for a plug and play, no customization needed, solution.
 
 ## Usage
 
@@ -17,6 +17,22 @@ Created for projects that I release in my job at Tremor Video DSP, this tool sim
 ```
 ```
 npm run changelog
+```
+
+## Automatically Add To Git Stage
+
+This tool accepts an optional `--stage` CLI argument that when used will automatically stage your CHANGELOG.md.
+
+Here's an example of its use in an npm build script:
+
+```
+"scripts": {
+    ...
+    "changelog": "git-to-changelog --stage",
+    "preversion": "npm test",
+    "version": "npm run changelog",
+    "postversion": "git push --follow-tags"
+  }
 ```
 
 ## Expectations
@@ -81,7 +97,7 @@ See this projects [CHANGELOG](https://github.com/Grafluxe/git-to-changelog/blob/
 
 ## License
 
-Copyright (c) 2018 Leandro Silva (http://grafluxe.com)
+Copyright (c) 2018, 2020 Leandro Silva (http://grafluxe.com)
 
 Released under the MIT License.
 
