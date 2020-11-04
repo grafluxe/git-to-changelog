@@ -1,7 +1,15 @@
 # Changelog
 
+## 1.4.0 (2020-11-04)
+
+- [Update 'compare-versions' dependency](https://github.com/Grafluxe/git-to-changelog/commit/7053d53)
+- [Update copyright date](https://github.com/Grafluxe/git-to-changelog/commit/03c0822)
+- [Update README](https://github.com/Grafluxe/git-to-changelog/commit/344f71d)
+- [Support automatically staging the changelog in git](https://github.com/Grafluxe/git-to-changelog/commit/84edb1d)
+
 ## 1.3.0 (2018-07-27)
 
+- [Bump version](https://github.com/Grafluxe/git-to-changelog/commit/4fbc61a)
 - [Improve commit indentation](https://github.com/Grafluxe/git-to-changelog/commit/0409ce1)
 - [Update 'previous parents' variable name](https://github.com/Grafluxe/git-to-changelog/commit/51fde7f)
 
