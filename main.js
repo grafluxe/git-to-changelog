@@ -12,6 +12,7 @@ let fs = require("fs"),
     exec = require("child_process").exec,
     comparePkgVersion = require("compare-versions"),
     pkg = require("../../package.json"),
+    hasStageFlag = false,
     commitURI,
     out;
 
@@ -20,7 +21,8 @@ if (pkg.homepage) {
   commitURI = pkg.homepage + dir;
 }
 
-getCommits()
+checkArgs()
+  .then(getCommits)
   .then(splitCommits)
   .then(formatCommits)
   .then(flagIndention)
@@ -28,6 +30,7 @@ getCommits()
   .then(handleFirstCommitVersion)
   .then(prepareOutput)
   .then(save)
+  .then(addToGitStage)
   .catch(err => {
     let errMsg = "";
 
@@ -40,6 +43,18 @@ getCommits()
 
     process.exit(1);
   });
+
+function checkArgs() {
+  const args = process.argv.slice(2);
+
+  hasStageFlag = args[0] === "--stage";
+
+  if (args.length > 1 || (args.length === 1 && !hasStageFlag)) {
+    return Promise.reject("You're using an unsupported argument.");
+  }
+
+  return Promise.resolve();
+}
 
 function getCommits() {
   return new Promise((res, rej) => {
@@ -190,6 +205,22 @@ function prepareOutput(formattedCommits) {
 function save() {
   return new Promise((res, rej) => {
     fs.writeFile("./CHANGELOG.md", out, err => {
+      if (err) {
+        return rej(err);
+      }
+
+      res();
+    });
+  });
+}
+
+function addToGitStage() {
+  if (!hasStageFlag) {
+    return Promise.resolve();
+  }
+
+  return new Promise((res, rej) => {
+    exec("git add CHANGELOG.md", (err) => {
       if (err) {
         return rej(err);
       }
